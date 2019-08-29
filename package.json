@@ -19,6 +19,7 @@
     "typescript": "^3.2.2"
   },
   "scripts": {
-    "build": "tsc --watch false --sourceMap false"
+    "build": "tsc --watch false --sourceMap false",
+    "watch": "tsc"
   }
 }

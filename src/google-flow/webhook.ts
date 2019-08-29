@@ -1,13 +1,11 @@
 import * as Router from 'koa-router';
-import { FullfillmentRequest, FullFillmentResponse } from './webhook.model';
+import { FullfillmentRequest } from './webhook.model';
+import IntentHandler from './intents';
 const router = new Router();
 
 router.post('/webhook', ctx => {
   const request = ctx.request.body as FullfillmentRequest;
-  const response = {
-    fulfillmentText: `Hooks work! ${request.responseId}`,
-  } as FullFillmentResponse;
-  ctx.body = response;
+  ctx.body = IntentHandler(request);
 });
 
 export default router;
