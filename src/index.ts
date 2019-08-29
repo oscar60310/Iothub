@@ -13,6 +13,6 @@ app
   .use(bodyParser())
   .use(router.routes())
   .use(router.allowedMethods());
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log(`[Web Server] Server start at ${port}`);
 });
