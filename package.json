@@ -1,0 +1,16 @@
+{
+  "name": "hub-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Chen Ping Tsai <oscar60310@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/node": "^10.12.18",
+    "chalk": "^2.4.2",
+    "tslint": "^5.12.1",
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript": "^3.2.2"
+  },
+  "scripts": {}
+}
