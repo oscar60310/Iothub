@@ -1,5 +1,6 @@
 import * as koa from 'koa';
 import * as Router from 'koa-router';
+import * as bodyParser from 'koa-bodyparser';
 
 import googleFlow from './google-flow/webhook';
 
@@ -9,6 +10,7 @@ const port = process.env.PORT || 3000;
 
 router.use('/google-flow', googleFlow.routes(), googleFlow.allowedMethods());
 app
+  .use(bodyParser())
   .use(router.routes())
   .use(router.allowedMethods());
 app.listen(3000, () => {
