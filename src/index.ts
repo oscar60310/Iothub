@@ -1,7 +1,7 @@
 import * as koa from 'koa';
 import * as Router from 'koa-router';
 import * as bodyParser from 'koa-bodyparser';
-
+import * as hub from './hub';
 import googleFlow from './google-flow/webhook';
 
 const app = new koa();
@@ -16,3 +16,5 @@ app
 app.listen(port, () => {
   console.log(`[Web Server] Server start at ${port}`);
 });
+
+hub.connect();
